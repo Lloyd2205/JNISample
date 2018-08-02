@@ -7,18 +7,27 @@ sudo apt-get install build-essential.
 
 Steps:
 1) Create a Java Class.
+
 2) Implementing a Method in C++
+
   1.Now, we need to create the implementation of our native method in C++
+  
   2.Within C++ the definition and the implementation are usually stored in .h and .cpp files respectively.
+  
   3.First, to create the definition of the method, we have to use the -h flag of the Java compiler:
+  
      javac -h . HelloWorldJNI.java
+     
 3)Now, we have to create a new .cpp file for the implementation of the sayHello function. This is where we’ll perform actions that print “Hello World” to console.
+
  Eg:
       JNIEXPORT void JNICALL Java_HelloWorldJNI_sayHello
   (JNIEnv* env, jobject thisObject) {
     std::cout << "Hello from C++ !!" << std::endl;
 }
+
 4)Compiling And Linking
+
 We need to build our shared library from the C++ code and run it!
 
 To do so, we have to use G++ compiler, not forgetting to include the JNI headers from our Java JDK installation.
