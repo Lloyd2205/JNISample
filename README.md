@@ -40,7 +40,8 @@ g++ -shared -fPIC -o libnative.so HelloWorldJNI.o -lc
 5)
 However, we need to add the full path to the directory containing the library we’ve just generated. This way Java will know where to look for our native libs:
 
-java -cp . -Djava.library.path=<path_to_.so> <class name>
+"java -cp . -Djava.library.path=<path_to_.so> <class name>"
+  
   eg: java -Djava.library.path=/home/lloyddcosta/JNISample/JniSample/src/jnilibs/ HelloWorldJNI where jnilibs is a package name which has .so file
  
 
