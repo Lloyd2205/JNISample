@@ -22,13 +22,10 @@ Steps:
 3)Now, we have to create a new .cpp file for the implementation of the sayHello function. This is where we’ll perform actions that print “Hello World” to console.
 
  Eg:
-      JNIEXPORT void JNICALL Java_HelloWorldJNI_sayHello
-      
-  (JNIEnv* env, jobject thisObject) {
+ 
+    JNIEXPORT void JNICALL Java_HelloWorldJNI_sayHello(JNIEnv* env, jobject thisObject)    {
   
-    std::cout << "Hello from C++ !!" << std::endl;
-    
-}
+    std::cout << "Hello from C++ !!" << std::endl;   }
 
 4)Compiling And Linking
 
