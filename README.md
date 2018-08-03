@@ -3,7 +3,8 @@ Steps followed to create shared library (i.e .so file)
 
 In this Project I have used C++ as Native Language and  G++ as compiler and linker.
 First make sure your ubuntu system has G++ Compiler , if not run the below command
-sudo apt-get install build-essential.
+
+"sudo apt-get install build-essential"
 
 Steps:
 1) Create a Java Class.
